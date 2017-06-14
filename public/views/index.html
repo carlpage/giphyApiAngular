@@ -25,9 +25,8 @@
       <div class="col-md-6">
         <input type="text" ng-model="hc.search">
         <button ng-click="hc.searchGiphy()">Search</button>
-        <img ng-src="{{hc.search.image_url}}">
+        <img ng-repeat="img in hc.imgResp" ng-src="{{img.images.downsized.url}}">
       </div>
-
     </div>
 
 
