@@ -12,7 +12,6 @@ myApp.controller('HttpController', function($http) {
 
   vm.randomGiphy = function() {
     console.log('Got a giphy');
-
     $http({
       method: 'GET',
       url: 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag='
@@ -22,7 +21,7 @@ myApp.controller('HttpController', function($http) {
       console.log('rando is: ', vm.rando);
     });
   };
-  
+
   vm.searchGiphy = function() {
     console.log('Got a giphy');
     $http({
@@ -30,6 +29,7 @@ myApp.controller('HttpController', function($http) {
       url: 'http://api.giphy.com/v1/gifs/search?q=' + vm.search + '&api_key=dc6zaTOxFJmzC'
     }).then(function(response) {
       console.log('back with: ', response);
+      vm.search = response.data.data;
     });
   };
 }); // end HttpController

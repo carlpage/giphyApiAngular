@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
   <script src="angular.min.js"></script>
   <script src="scripts/script.js"></script>
   <title>Giphy API</title>
@@ -12,11 +14,23 @@
 
 <body ng-app="myApp">
   <h1>Giphy API - Angular Edition</h1>
-  <div ng-controller="HttpController as hc" ng-init="hc.startUpFunction()">
-    <button ng-click="hc.randomGiphy()">Get a random Giphy!</button>
-    {{hc.rando}}
-    <input type="text" ng-model="hc.search">
-    <button ng-click="hc.searchGiphy()">Search</button>
+  <div class="container" ng-controller="HttpController as hc" ng-init="hc.startUpFunction()">
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <button ng-click="hc.randomGiphy()">Get a random Giphy!</button>
+        <img ng-src="{{hc.rando.image_url}}">
+      </div>
+      <div class="col-md-6">
+        <input type="text" ng-model="hc.search">
+        <button ng-click="hc.searchGiphy()">Search</button>
+        <img ng-src="{{hc.search.image_url}}">
+      </div>
+
+    </div>
+
+
   </div>
 </body>
 

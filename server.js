@@ -13,7 +13,7 @@ app.use('/', index);
 //globals
 var port = process.env.PORT || 8000;
 
-//spin up server
+// spin up server
 app.listen(port, function() {
   console.log('server up on port: ', port);
 }); // end spin up server
