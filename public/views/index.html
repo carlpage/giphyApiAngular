@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="angular.min.js"></script>
+  <script src="scripts/script.js"></script>
+  <title>Giphy API</title>
+</head>
+
+<body ng-app="myApp">
+  <h1>Giphy API - Angular Edition</h1>
+  <div ng-controller="HttpController as hc" ng-init="hc.startUpFunction()">
+    <button ng-click="hc.randomGiphy()">Get a random Giphy!</button>
+    {{hc.rando}}
+    <input type="text" ng-model="hc.search">
+    <button ng-click="hc.searchGiphy()">Search</button>
+  </div>
+</body>
+
+</html>
