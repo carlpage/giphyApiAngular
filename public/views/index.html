@@ -13,24 +13,25 @@
 </head>
 
 <body ng-app="myApp">
-  <h1>Giphy API - Angular Edition</h1>
+  <header>
+    <h1>Giphy API - Angular Edition</h1>
+  </header>
   <div class="container" ng-controller="HttpController as hc" ng-init="hc.startUpFunction()">
-
-
     <div class="row">
-      <div class="col-md-6">
+      <div class="buttonGroup">
         <button ng-click="hc.randomGiphy()">Get a random Giphy!</button>
+        <input type="text" ng-model="hc.search">
+        <button ng-click="hc.searchGiphy()">Search</button>
+      </div>
+      <div class="col-md-6">
         <img ng-src="{{hc.rando.image_url}}">
       </div>
       <div class="col-md-6">
-        <input type="text" ng-model="hc.search">
-        <button ng-click="hc.searchGiphy()">Search</button>
         <img ng-repeat="img in hc.imgResp" ng-src="{{img.images.downsized.url}}">
       </div>
     </div>
-
-
   </div>
+
 </body>
 
 </html>

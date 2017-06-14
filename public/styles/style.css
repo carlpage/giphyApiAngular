@@ -1,3 +1,17 @@
 h1 {
   text-align: center;
+  margin-bottom: 25px;
+}
+
+.buttonGroup {
+  text-align: center;
+  margin: 25px;
+}
+
+.col-md-6 {
+  display: inline-block;
+}
+
+img {
+  margin: 5px;
 }
