@@ -9,19 +9,22 @@
   <link rel="stylesheet" href="styles/style.css">
   <script src="angular.min.js"></script>
   <script src="scripts/script.js"></script>
-  <title>Giphy API</title>
+  <script src="scripts/panda.js"></script>
+  <script src="scripts/searchServ.js"></script>
+  <title>Giphy API - Service Upgrade</title>
 </head>
 
 <body ng-app="myApp">
+
   <header>
     <h1>Giphy API - Angular Edition</h1>
   </header>
   <div class="container" ng-controller="HttpController as hc" ng-init="hc.startUpFunction()">
     <div class="row">
       <div class="buttonGroup">
-        <button ng-click="hc.randomGiphy()">Get a random Giphy!</button>
+        <button ng-click="hc.whatever()">Get a random Giphy!</button>
         <input type="text" ng-model="hc.search">
-        <button ng-click="hc.searchGiphy()">Search</button>
+        <button ng-click="hc.searchResp()">Search</button>
       </div>
       <div class="col-md-6">
         <img ng-src="{{hc.rando.image_url}}">

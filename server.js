@@ -7,7 +7,7 @@ var index = require('./modules/index');
 
 //uses
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', index);
 
 //globals
